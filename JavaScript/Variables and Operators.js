@@ -31,21 +31,41 @@
         //x results in "55"
 
         //has mostly the same arithmetic operators as python
-        
+    
+    // JavaScript Assignment Operators (verfiy)
+        /*
+            var1 (+,-,<<,etc)= var2
+                same as
+            var1 = var1 (+,=,<<,etc) var2
+        */
+
     // JavaScript Comparison
+        let x = 5;
+
         '==' //equal to
+            x == 8 //False
+            x == 5 //True
+            x == '5' //True
+
         '!=' //not equal
+            x != 8 //True
 
 
         '===' //equal value and equal type
-            5 === '5' //False
-            5 === 5 //True
+            x === '5' //False
+            x === 5 //True
         
         '!==' // not equal value and not equal type
-            5 !== '5' //True
-            5 !== 5 //False    
+            x !== '5' //True
+            x !== 5 //False  
+            x !== 8 //True  
 
         //has mostly the same comparison operators as python
+        //string comparsion is done alphabetically
+    
+    // JavaScript Logoical Operators
+    // JavaScript Type Operators
+    // JavaScript Bitwise Operators
 
 // JavaScipt Scope
 /*
