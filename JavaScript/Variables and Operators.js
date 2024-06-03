@@ -20,6 +20,9 @@
     $ //Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.
     _lastname //Using the underscore is not very common in JavaScript, but a convention among professional programmers is to use it as an alias for "private (hidden)" variables
 
+    //variable can be emptied by setting it to undefined
+    car = undefined // Value is undefined, type is undefined
+
 //
 
 // JavaScript Operators
@@ -64,7 +67,6 @@
         //string comparsion is done alphabetically
     
     // JavaScript Logoical Operators
-    // JavaScript Type Operators
     // JavaScript Bitwise Operators
 
 // JavaScipt Scope
