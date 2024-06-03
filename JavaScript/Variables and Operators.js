@@ -23,6 +23,13 @@
     //variable can be emptied by setting it to undefined
     car = undefined // Value is undefined, type is undefined
 
+    //Empty Values and Undefined
+        //undefined
+        let car; //value is undefined
+        car = undefined //value is undefined
+
+        //Empty Value
+        let car1 = ""; //empty string
 //
 
 // JavaScript Operators
