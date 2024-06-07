@@ -30,9 +30,12 @@
 
         //Empty Value
         let car1 = ""; //empty string
-//
 
 // JavaScript Operators
+    //Type Operators
+        `typeof` //used to find the type of a variable
+        typeof "John" //returns "string"
+
     // JavaScript Arithmetic
         let x = "5" + 2 + 3
         //x results in "523"

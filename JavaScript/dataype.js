@@ -51,30 +51,101 @@
 
             let text_array = text.split("") //returns an array of single characters
         
-    //Template Strings - JS string enclosed in backticks
-    //  allows multiline strings, string interpolation, embedding expressions, tagged templates, and nesting templates
-    let texttemp = 
-    `john's
-    head is rolling
-    on the floor`;
+        //Template Strings - JS string enclosed in backticks
+        //  allows multiline strings, string interpolation, embedding expressions, tagged templates, HTML templates and nesting templates
+        let texttemp = 
+        `john's
+        head is rolling
+        on the floor`;
 
-    let gas = 10;
-    let texttemp2 = `Wecome ${text} to the middle of nowhere for the total price of ${gas * 3}`
+        let gas = 10;
+        let texttemp2 = `Wecome ${text.toUpperCase()} to the middle of nowhere for the total price of ${gas * 3}`
 
+        //Numeric Strings
+        let num1 = "100", num2 = "10", num3 = 10;
+        let sum1 = num1/num2; //evaluates to 10, works even with num3
+            //applies to all arithmetic operators besides +
+            let sum2 = num1 + num2 //evaluates to "10010"
+
+    //JavaScript Numbers
+        /*numbers are always double(64-bit floating point)
+            it is possible to create num objects, but this is usualy not recommended
+            let y = new Number(123)
+        */
+        let xx = 3.14, xxx = 3; //with or without decimals
+
+        //Integer Precision is up to 15 digits
+        //Floating Point Arithmetic is not always 100% accurate
+            let xy = 0.2 + 0.1; //evalutaes to 0.30000000000000004
+
+        /*NaN - Not a Number
+            NaN is a JS reserved word indicating that a number is not a legal number.
+            Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+            NaN type ---> number
+        */
+        isNaN(x) //used to check if a value is not a number
+
+        /*Infinity / -Infinity
+            The value JS will return if you calculate a number outside the alrgest possible number
+            and division by zero
+            Infinity type ----> number
+        */        
+
+        //Hexadecimal - JS interprets numeric constants as exadecimal if they are preceded by 0x
+        let hexx = 0xFF; //hexx is 255, type num
+
+        //Number Methods
+
+            //Integer Method Check
+            Number.isInteger(10) //returns true
+            Number.isInteger(10.5)  //returns false
+            Number.isSafeInteger(10)    //returns true
+            Number.isSafeInteger(10.5)  //returns false
+            Number.isSafeInteger(12345678901234567890)  //returns false
+
+            let numberx = 9.656;
+            let numberx1 = numberx.toExponential(6);   //returns 9.656000e+0
+            let numberx2 = numberx.toFixed(4); //returns 9.6560
+            let numberx3 = numberx.toPrecision(4);   //returns 9.656
+
+            //used to convert a number object to primitive values
+            (123).valueOf();    //returns 123
+            //used to convert vars to numbers, returns NaN if it can't
+            Number("10");   //returns 10
+            //parses a string returns the first whole number, space is allowed and returns NaN if it can't
+            parseInt("10 20 30")    //returns 10
+            //parses a string returns the first number, space is allowed and returns NaN if it can't
+            parseFloat("10 20 30")  //returns 10
+        
+        //Number Properties
+            let esp = Number.EPSILON    //the difference between the smallest floating point number greater than 1 and 
+            let maxVal = Number.MAX_VALUE   //a constant representing the largest possible number in JS
+            let minVal = Number.MIN_VALUE   //a constant representing the lowest possible number in JS
+            let maxSVal = Number.MAX_SAFE_INTEGER   //represents the maximum safe integer in JS
+            let minSVal = Number.MIN_SAFE_INTEGER   //represents the minimum safe integer in JS
+            let posInf = Number.POSITIVE_INFINITY
+            let negInf = Number.NEGATIVE_INFINITY
+            let nonVal = Number.NaN
+
+    /*BigInt type is used when value is too big for double
+        operators that is used on num can also be used on a BigInt
+            * arithmetic between a BigInt and a Number is not allowed (type conversion lose information)
+            * Unsigned right shift (>>>) can not be done on BigInt (does not have a fixed width)
+            * does not have decimals
+            * can be written in hexadecimal, octal, or binary notation (0x, 0o, 0b)
+
+        bigint type ----> bigint
+    */
+        let y = BigInt("123456789012345678901234567890");
+
+    //supports Exponential Notation
+        y = 123e5;
+    
 //Object Datatypes
     //Dynamic Typing
     let x;
     x = 5;
     x = "John";
-
-    //JavaScript Numbers
-
-        //numbers are always double(64-bit floating point)
-        //BigInt type is used when value is too big for double
-        let y = BigInt("123456789012345678901234567890");
-
-        //supports Exponential Notation
-        y = 123e5;
 
     //Constant Arrays
     const cars = ['say', 'talk']
@@ -87,7 +158,3 @@
         //cannot reassign the obj, but can change or add it values
     
     car.owner = "Johnson"; 
-    
-    //Type Operators
-    `typeof` //used to find the type of a variable
-        typeof "John" //returns "string"
